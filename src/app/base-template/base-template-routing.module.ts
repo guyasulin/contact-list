@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BaseTemplateComponent } from './base-template.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () =>
-     import('./base-template/base-template.module')
-     .then(m => m.BaseTemplateModule)
+    component: BaseTemplateComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class BaseTemplateRoutingModule { }
