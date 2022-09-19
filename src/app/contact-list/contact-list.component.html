@@ -1,0 +1,48 @@
+<div class="contact-list">
+  <div class="container-contact-list" *ngIf="contacts$ | async as contacts">
+    <div class="row">
+      <!--  If there will be a general search on the server side -->
+      <cdk-virtual-scroll-viewport #scroller itemSize="85" class="content">
+        <ng-container *cdkVirtualFor="let contact of contacts; let i = index">
+          <div
+            class="card"
+          >
+            <div class="card-image">
+              <img class="icon_image" [src]="contact.icon" />
+              <img class="profile_image" [src]="contact.profile_image" />
+            </div>
+            <div class="card-title">
+              <h3>
+                {{ contact.name }}
+              </h3>
+            </div>
+            <div class="card-content">
+              <div>Job Title: {{ contact.company_name }}</div>
+              <div class="moreDetails">
+                <div>Phone phone: {{ contact.company_name }}</div>
+                <div>Email: {{ contact.email }}</div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        <div *ngIf="!contacts.length">NOT FOUND</div>
+      </cdk-virtual-scroll-viewport>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="row" *ngFor="let contact of contacts$ | async">
+  <div class="card">
+    <div class="card-image">
+      <img class="profile_image" [src]="contact.profile_image" >
+    </div>
+    <div class="card-title">
+      <h3>
+        {{contact.name}}
+      </h3>
+    </div>
+    <div class="card-content">
+      <div>Job Title: {{contact.company_name}}</div>
+    </div>
+  </div>
+</div> -->

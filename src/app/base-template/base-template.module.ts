@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { BaseTemplateRoutingModule } from './base-template-routing.module';
 import { BaseTemplateComponent } from './base-template.component';
-import { ConectListModule } from '../conect-list/conect-list.module';
+import { ContactListModule } from '../contact-list/contact-list.module';
 import { ToolbarModule } from '../toolbar/toolbar.module';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -14,10 +15,9 @@ import { ToolbarModule } from '../toolbar/toolbar.module';
   imports: [
     CommonModule,
     BaseTemplateRoutingModule,
-    // ToolbarModule,
-    ConectListModule,
-
-    ToolbarModule
+    ContactListModule,
+    ToolbarModule,
+    MatProgressSpinnerModule
   ]
 })
 export class BaseTemplateModule { }

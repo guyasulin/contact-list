@@ -1,10 +1,17 @@
 <div class="container-base-template">
   <div class="toolbar">
-    <!-- <lib-toolbar></lib-toolbar> -->
     <app-toolbar></app-toolbar>
   </div>
 
-  <div class="conect-list">
-    <app-conect-list></app-conect-list>
+  <div class="spinner-item">
+    <mat-progress-spinner
+      *ngIf="loading"
+      [mode]="'indeterminate'"
+      [diameter]="50"
+    ></mat-progress-spinner>
+  </div>
+
+  <div class="contact-list">
+    <app-contact-list [contacts$]="filterData$"></app-contact-list>
   </div>
 </div>

@@ -1,1 +1,9 @@
-<p>search-bar works!</p>
+<div class="search-bar">
+  <form class="form" [formGroup]="searchForm">
+    <mat-form-field class="search" appearance="outline">
+      <input matInput type="text" formControlName="search" (keyup)="search($event)"
+        placeholder="search...">
+        <mat-icon  class="icon-search" matSuffix>search</mat-icon>
+    </mat-form-field>
+</form>
+</div>

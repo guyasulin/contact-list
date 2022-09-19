@@ -1,0 +1,91 @@
+:host {
+  display: block;
+  overflow: hidden;
+}
+.contact-list {
+  .container-contact-list {
+    .row {
+      .content {
+        max-width: 65rem;
+        margin: 5rem auto;
+        height: calc(100vh - 14rem);
+
+        ::ng-deep .cdk-virtual-scroll-content-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          .card {
+            max-width: 400px;
+            border: 1px solid rgba(0, 0, 0, 0.14);
+            width: 15rem;
+            padding: 11px;
+            box-sizing: border-box;
+            margin: 4px;
+            background: #fff;
+            min-height: 20rem;
+            max-height: 25rem;
+
+            &:hover {
+              cursor: pointer;
+              .moreDetails {
+                display: block;
+                max-height: 500px;
+                transition: max-height 0.25s ease-in;
+                transform: scaleY(1);
+              }
+            }
+
+            .card-image {
+              position: relative;
+              margin-bottom: 1rem;
+
+              .icon_image {
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                position: absolute;
+                top: 10.9rem;
+                left: 1rem;
+              }
+              .profile_image {
+                margin: auto;
+                display: flex;
+                width: 13.5rem;
+                height: 12rem;
+                border: 2px solid rgb(0 0 0 / 4%);
+              }
+            }
+
+            .card-content {
+              font-size: 13px;
+            }
+
+            .spinner-item {
+              display: grid;
+              place-items: center;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .moreDetails {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.26s ease;
+
+  }
+}
+
+.cdk-virtual-scroll-viewport::-webkit-scrollbar {
+  width: 0.3rem;
+  z-index: 9999;
+}
+.cdk-virtual-scroll-viewport::-webkit-scrollbar-thumb {
+  background-color: #cbcdd6;
+  outline: 0.1rem solid #cbcdd6;
+  border-radius: 0.3rem;
+  width: 0.6rem;
+}
