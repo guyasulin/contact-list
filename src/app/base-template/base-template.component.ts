@@ -13,7 +13,6 @@ import { Contact } from '../utils/contact.interface';
 export class BaseTemplateComponent implements OnInit {
   contacts$ = this.contactListService.getContacts();
   filterData$?: Observable<Contact[]>;
-  loading = false
   constructor(private contactListService: ContactListService) {}
 
   ngOnInit(): void {

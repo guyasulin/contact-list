@@ -3,14 +3,6 @@
     <app-toolbar></app-toolbar>
   </div>
 
-  <div class="spinner-item">
-    <mat-progress-spinner
-      *ngIf="loading"
-      [mode]="'indeterminate'"
-      [diameter]="50"
-    ></mat-progress-spinner>
-  </div>
-
   <div class="contact-list">
     <app-contact-list [contacts$]="filterData$"></app-contact-list>
   </div>

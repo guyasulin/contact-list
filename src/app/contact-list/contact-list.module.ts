@@ -4,8 +4,6 @@ import { ContactListComponent } from './contact-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactListService } from '../services/contact-list.service';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
 @NgModule({
   declarations: [
     ContactListComponent
@@ -14,7 +12,6 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     CommonModule,
     HttpClientModule,
     ScrollingModule,
-    MatProgressSpinnerModule
   ],
   exports: [
     ContactListComponent
